@@ -1,25 +1,25 @@
 class Gt < Formula
   desc "Lazy git worktree"
   homepage "https://github.com/fkhadra/gt"
-  version "0.1.0"
+  version "0.1.1"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/fkhadra/gt/releases/download/v0.1.0/gt-aarch64-apple-darwin.tar.xz"
-      sha256 "d0df6135e538ef3c6b9bce2a9a8f8e1ee853d7c4a0d9bb9ef6c459c265664472"
+      url "https://github.com/fkhadra/gt/releases/download/v0.1.1/gt-aarch64-apple-darwin.tar.xz"
+      sha256 "0109e5cc951ca11b29c1ed26e3668581b23875e3601e790576c566e620244755"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fkhadra/gt/releases/download/v0.1.0/gt-x86_64-apple-darwin.tar.xz"
-      sha256 "6dd5a4d6817e44a2560311ed4c5630bb8985feecc4a79ec526a3c87dc109b03d"
+      url "https://github.com/fkhadra/gt/releases/download/v0.1.1/gt-x86_64-apple-darwin.tar.xz"
+      sha256 "af5c8132995d587a1439adc38cdde8ca9dc1b74263dd8b6ec05881a294c5dc9a"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/fkhadra/gt/releases/download/v0.1.0/gt-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "a9ad5d38e903fc7d79e58813ea067a79b268d06fada015ea5fc3b706fdc39975"
+      url "https://github.com/fkhadra/gt/releases/download/v0.1.1/gt-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "5dc27f5b5bc2721c5ac72327c4602cf56ee016cc615a20767b6737122dbc3d2f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fkhadra/gt/releases/download/v0.1.0/gt-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "64f8f4ca253984d89dba0aa1cc6074e69b4fcdccebf0adc0845637a76f1edffc"
+      url "https://github.com/fkhadra/gt/releases/download/v0.1.1/gt-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "7803b2bba4caf858adcb63397f6eb87de045c8f9f8d931164142d578f48333c1"
     end
   end
 
