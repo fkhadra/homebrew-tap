@@ -1,25 +1,25 @@
 class Gt < Formula
   desc "Lazy git worktree"
   homepage "https://github.com/fkhadra/gt"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/fkhadra/gt/releases/download/v0.1.1/gt-aarch64-apple-darwin.tar.xz"
-      sha256 "0109e5cc951ca11b29c1ed26e3668581b23875e3601e790576c566e620244755"
+      url "https://github.com/fkhadra/gt/releases/download/v0.1.2/gt-aarch64-apple-darwin.tar.xz"
+      sha256 "d7bbfab126c14c0e4bd831cecdfd063371c324aec62bbc670176ab6454b9b7c3"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fkhadra/gt/releases/download/v0.1.1/gt-x86_64-apple-darwin.tar.xz"
-      sha256 "af5c8132995d587a1439adc38cdde8ca9dc1b74263dd8b6ec05881a294c5dc9a"
+      url "https://github.com/fkhadra/gt/releases/download/v0.1.2/gt-x86_64-apple-darwin.tar.xz"
+      sha256 "c68777114f6128b0f1c400a341cfef61b1276abc8f7f97e59789de85dadbe3f2"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/fkhadra/gt/releases/download/v0.1.1/gt-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "5dc27f5b5bc2721c5ac72327c4602cf56ee016cc615a20767b6737122dbc3d2f"
+      url "https://github.com/fkhadra/gt/releases/download/v0.1.2/gt-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "74abe754592b270dd9435285b1b0878d11ac5220b2b6adab58168906bb57e411"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/fkhadra/gt/releases/download/v0.1.1/gt-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "7803b2bba4caf858adcb63397f6eb87de045c8f9f8d931164142d578f48333c1"
+      url "https://github.com/fkhadra/gt/releases/download/v0.1.2/gt-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "482813eda4405ba5a39fe8fa4b92cb439c5c6a9f7b656d74df500b427f45dbd8"
     end
   end
 
@@ -47,10 +47,18 @@ class Gt < Formula
   end
 
   def install
-    bin.install "gt" if OS.mac? && Hardware::CPU.arm?
-    bin.install "gt" if OS.mac? && Hardware::CPU.intel?
-    bin.install "gt" if OS.linux? && Hardware::CPU.arm?
-    bin.install "gt" if OS.linux? && Hardware::CPU.intel?
+    if OS.mac? && Hardware::CPU.arm?
+      bin.install "gt"
+    end
+    if OS.mac? && Hardware::CPU.intel?
+      bin.install "gt"
+    end
+    if OS.linux? && Hardware::CPU.arm?
+      bin.install "gt"
+    end
+    if OS.linux? && Hardware::CPU.intel?
+      bin.install "gt"
+    end
 
     install_binary_aliases!
 
