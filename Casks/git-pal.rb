@@ -10,7 +10,13 @@ cask "git-pal" do
   desc "Keyboard-first companion for GitHub pull requests with AI reviews"
   homepage "https://github.com/fkhadra/git-pal"
 
+  livecheck do
+    url :url
+    strategy :github_latest
+  end
+
   auto_updates true
+  depends_on :macos
 
   app "Git Pal.app"
 
