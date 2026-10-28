@@ -1,9 +1,9 @@
 cask "git-pal" do
   arch arm: "aarch64", intel: "x64"
 
-  version "0.0.4"
-  sha256 arm:   "5d6aad2e88bbd00429b42d50d329f733ba9aecf6b9edddd9a72db974167e2d85",
-         intel: "11d00fae9088d783ef7fbc0ff52a5d36fc86470f4908cae7ff7f1888593349a9"
+  version "0.0.5"
+  sha256 arm:   "d68c06a26cfc02746b22bb7813f1548d7002ad131a8ffe5114cd62f157f9ffcc",
+         intel: "9230618caf415c6f2e5d0643360ab05a7fde8fb0cba02a0a845eebc25090bf43"
 
   url "https://github.com/fkhadra/git-pal/releases/download/v#{version}/Git.Pal_#{version}_#{arch}.dmg"
   name "Git Pal"
